@@ -1,0 +1,52 @@
+# 内容发布全流程 / Content Publish Lifecycle — 完整文本 (full text)
+
+本文件为 llms.txt 标准的「完整版」，供长上下文模型一次性读取本仓库的完整说明。
+
+## 这是什么 / What this is
+
+把「设计 → 落地 → 检查 → 验证 → 发布 → 沉淀」串成一条可复用的内容发布流水线，
+让发布从凭感觉变成有据可查。核心主张：**对外发布必须挂真实依据**——每个发布件带
+版本号、指纹与回执，全程可追溯；权属证明由本机算力完成，不依赖任何外部服务。
+
+## 六个阶段 / Six stages
+
+1. **设计 Design**：定「发什么、发到哪、版本号」，拆成可执行阶段与检查点。
+2. **落地 Implement**：按渠道规格把内容适配成可发布形态，产出与源稿解耦的发布件。
+3. **检查 Inspect**：外发前逐条核对清单（渠道 | 内容 | 版本 | 拟发布时间），先确认后执行。
+4. **验证 Verify**：本地零网络生成权属证明（ATTESTATION）与安全实测雷达。
+5. **发布 Publish**：通过受控通道（如 Git Data API）落地到目标仓库/渠道，记录回执。
+6. **沉淀 Consolidate**：回传发布记录/版本/指纹，支持复盘与版本回溯。
+
+## 快速开始 / Quick start
+
+```bash
+# 通过技能管理器安装
+openclaw skills install @zhaoxinghua09-cell/content-publish-lifecycle
+
+# 或克隆后把 SKILL.md 放入你的 skills 目录
+git clone https://github.com/zhaoxinghua09-cell/content-publish-lifecycle.git
+
+# 本地零网络生成权属证明（逐文件 SHA256 + 包级指纹，写入 ATTESTATION.md）
+python publish_attest.py
+
+# 由 security_results.json 确定性渲染安全雷达 SVG（无随机量、无时间戳）
+python gen_skill_security_radar.py --results security_results.json
+```
+
+## 触发词 / Trigger words
+
+内容发布流程 / 发布流水线 / 设计落地检查验证发布沉淀 / 对外主张挂依据 / 本地权属证明 /
+SHA256 指纹 / 发布回执 / 安全实测雷达 / content publishing workflow / release pipeline /
+provenance attestation / security radar.
+
+## 许可与权利 / License and rights
+
+- 本仓库以 **MIT 许可** 发布（见 `LICENSE.md`），厂商中立。
+- 署名：SynomosAI · 诺声(Logos)。版权：SynomosAI。
+- 引用时请标注仓库名与原文链接 `https://github.com/zhaoxinghua09-cell/content-publish-lifecycle`。
+- 任何对外主张（性能、效果、合规）必须挂真实依据，不得凭空宣称。
+- 联系：zhaoxinghua06@126.com ｜ ORCID `0009-0001-0512-1237`。
+
+## 链接 / Links
+
+- 仓库: https://github.com/zhaoxinghua09-cell/content-publish-lifecycle

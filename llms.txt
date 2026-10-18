@@ -1,0 +1,32 @@
+# 内容发布全流程 / Content Publish Lifecycle (content-publish-lifecycle)
+
+> 从「方案做完」到「有据可查地发出去」：把 设计 → 落地 → 检查 → 验证 → 发布 → 沉淀 串成一条可复用发布流水线，让发布从凭感觉变成可审计的过程。
+> From design done to shipped with evidence: a reusable publish pipeline that turns publishing from guesswork into an auditable process.
+
+`content-publish-lifecycle` is a skill that breaks publishing into six stages, each with a clear deliverable and checkpoint. Local, network-free provenance attestation (`publish_attest.py` computes SHA-256 and a package fingerprint offline) plus a deterministic security radar (`gen_skill_security_radar.py` renders `security_results.json` to SVG with no randomness).
+
+## Core
+
+- [SKILL.md](https://github.com/zhaoxinghua09-cell/content-publish-lifecycle/blob/main/SKILL.md): skill entry
+- [publish_attest.py](https://github.com/zhaoxinghua09-cell/content-publish-lifecycle/blob/main/publish_attest.py): local, network-free SHA-256 / package-fingerprint attestation
+- [gen_skill_security_radar.py](https://github.com/zhaoxinghua09-cell/content-publish-lifecycle/blob/main/gen_skill_security_radar.py): deterministic security radar SVG renderer
+- [README.md](https://github.com/zhaoxinghua09-cell/content-publish-lifecycle/blob/main/README.md): full bilingual overview
+- [manifest.json](https://github.com/zhaoxinghua09-cell/content-publish-lifecycle/blob/main/manifest.json): metadata (name / version / author / license)
+
+## The six stages
+
+1. **设计 Design** — decide what to publish, where, and the version number; split the goal into executable stages and checkpoints.
+2. **落地 Implement** — adapt content to channel specs (title / tags / format / length); decouple the publishable artifact from the source.
+3. **检查 Inspect** — check a channel | content | version | scheduled-time list before anything goes out; confirm-then-act.
+4. **验证 Verify** — locally generate a provenance attestation (ATTESTATION) and a security radar, with zero network.
+5. **发布 Publish** — land to the target repo / channel through a controlled path (e.g. Git Data API); record link, time, status.
+6. **沉淀 Consolidate** — feed publish records, versions and fingerprints back for retrospectives and version rollback.
+
+## Optional
+
+- [AGENTS.md](https://github.com/zhaoxinghua09-cell/content-publish-lifecycle/blob/main/AGENTS.md): work guidance for AI agents
+- [llms-full.txt](https://github.com/zhaoxinghua09-cell/content-publish-lifecycle/blob/main/llms-full.txt): full text for long-context models
+- [SECURITY.md](https://github.com/zhaoxinghua09-cell/content-publish-lifecycle/blob/main/SECURITY.md): security policy
+- [CONTRIBUTING.md](https://github.com/zhaoxinghua09-cell/content-publish-lifecycle/blob/main/CONTRIBUTING.md): contribution guide
+- [ATTESTATION.md](https://github.com/zhaoxinghua09-cell/content-publish-lifecycle/blob/main/ATTESTATION.md): provenance attestation & rights notice
+- [LICENSE.md](https://github.com/zhaoxinghua09-cell/content-publish-lifecycle/blob/main/LICENSE.md): MIT license

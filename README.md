@@ -1,4 +1,11 @@
 # 内容发布全流程（设计→落地→检查→验证→发布→沉淀）· Content Publish Lifecycle
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE.md)
+[![Local & Network-free](https://img.shields.io/badge/provenance-local--zero%20network-2ea44f.svg)](#)
+[![Deterministic Radar](https://img.shields.io/badge/radar-deterministic%20SVG-blue.svg)](security-radar.svg)
+[![Evidence-chain](https://img.shields.io/badge/evidence-chain-logged-orange.svg)](#)
+[![Bilingual](https://img.shields.io/badge/docs-EN%2FZH-brightgreen.svg)](README.en.md)
+
 ## 许可说明 · License Notice
 
 - **权利状态**：本仓库以 **MIT 许可** 许可发布，可依该许可证条款自由使用、修改与再分发。
